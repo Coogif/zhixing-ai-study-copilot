@@ -48,3 +48,7 @@
 实际结果：`node scripts/check.mjs` **22/22通过**；`node --test tests/e2e/*.test.mjs` **11/11通过**。新增对真实dist仓库子路径与file://离线完整流程的验收。关键源码64,903字节，静态浏览器0外部请求。静态构建及`node scripts/verify-release.mjs`通过，扫描常见凭据、环境文件、产物白名单及本地Markdown链接，无匹配凭据。无Git历史可供历史扫描。
 
 最终剩余：公网仓库/Actions/Pages、真实模型效果、用户研究/教育效果、独立教育审题、Safari及屏幕阅读器、弱网/生产性能。本人的实际产品决策参与情况仍需据实补充。完整结论见ACCEPTANCE。
+
+## 用户授权后的实际发布
+
+2026-10-31用户明确要求代为发布。创建独立公开仓库Coogif/zhixing-ai-study-copilot、推送main并启用Pages。GitHub连接拒绝写工作流后，使用已登录GitHub网页编辑器提交同一配置，没有请求扩大权限。首次远程Actions 41207866846的verify/deploy均成功；Linux22项单元检查、11项浏览器回归通过。正式HTTPS网址通过隔离Edge的8组线上冒烟，脚本异常0、桌面外部页面请求0；包含320/390px四页面、刷新、复习和清空。详见PUBLICATION及真实线上截图。未访问或修改其他仓库。

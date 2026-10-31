@@ -4,7 +4,7 @@
 >
 > **求职作品原型 v0.2 · AI 辅助开发 · 12 道原创样例题 · 无真实用户或提分数据**
 >
-> **在线演示：尚未部署。** 当前可运行本地版、离线版；Pages 发布流程已准备，正式网址须在部署成功后填写。
+> **[打开在线演示](https://coogif.github.io/zhixing-ai-study-copilot/)** · [GitHub 仓库](https://github.com/Coogif/zhixing-ai-study-copilot) · [上线验收记录](docs/PUBLICATION.md)
 
 ![运行中的学习总览，数据均为虚构](assets/demo-with-data.png)
 
@@ -104,10 +104,10 @@ assets/                真实界面截图及截图来源记录
 .github/workflows/      检查与受测试约束的 Pages 发布
 ```
 
-[发布步骤](docs/PUBLISH.md) 采用独立新仓库及 GitHub Actions，仅部署 `dist/`。当前没有配置远程仓库、推送代码或修改任何其他仓库。`package.json` 中 `private: true` 只防止误发布到 npm，与 GitHub 仓库可见性无关。
+[发布步骤](docs/PUBLISH.md) 采用独立新仓库及 GitHub Actions，仅部署 `dist/`。当前项目已发布到独立公开仓库，GitHub Actions 检查通过后部署；没有访问或修改其他仓库。`package.json` 中 `private: true` 只防止误发布到 npm，与 GitHub 仓库可见性无关。
 
 ## 局限与署名
 
-题量少、同题记忆效应明显，规则与复习间隔都未经教育效果实验；预写内容尚未经独立专家审核。尚未验证 Safari、真实屏幕阅读器、真实模型质量和公网 Pages。推荐曝光/转化埋点、授权真题、账户同步与知识追踪模型均未实现，规划见 [版本路线](docs/ROADMAP.md)。
+题量少、同题记忆效应明显，规则与复习间隔都未经教育效果实验；预写内容尚未经独立专家审核。尚未验证 Safari、真实屏幕阅读器及真实模型质量；公网 Pages 已通过线上冒烟验收。推荐曝光/转化埋点、授权真题、账户同步与知识追踪模型均未实现，规划见 [版本路线](docs/ROADMAP.md)。
 
 这是 **AI 辅助开发和整理文档的个人产品探索原型**。不能将代码写成独立手写，也不能将文档中的候选设计自动视为本人独立完成、亲自验证的成果。请按 [贡献说明](docs/CONTRIBUTIONS.md) 补充自己真实参与的决策、演示和测试。

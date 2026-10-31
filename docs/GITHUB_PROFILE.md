@@ -1,6 +1,6 @@
 # GitHub个人主页展示建议
 
-在独立新仓库公开并验证Pages之后，再将项目置顶到个人主页，填写实际仓库和在线演示地址。当前没有创建或推送任何远程仓库，不要把占位地址当成可用链接。
+本项目现已公开：[仓库](https://github.com/Coogif/zhixing-ai-study-copilot) · [在线体验](https://coogif.github.io/zhixing-ai-study-copilot/)。可将项目置顶到个人主页；本轮未代为修改主页或其他仓库。
 
 简介候选文案：
 

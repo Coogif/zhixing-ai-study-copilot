@@ -50,3 +50,7 @@ Windows使用已安装Edge；其他系统用Playwright Chromium。端到端测�
 ## 尚未验证
 
 真实OpenAI模型输出、教学正确性评测、真实用户任务/效果、iOS/Safari/Firefox、屏幕阅读器实测、低端手机/弱网性能、生产负载、GitHub Actions远程执行、公网Pages。没有声称完整无障碍合规、全量安全审计或用户增长。
+
+## 2026-10-31 线上补充验收
+
+用户授权发布后，首次GitHub Actions在Linux完成22项单元检查、11项Chromium浏览器测试并部署成功。正式HTTPS网址的8组冒烟检查通过，含完整闭环、刷新/重置、320/390px四页面及私有路径404。脚本异常0、桌面外部页面请求0，详细证据见[PUBLICATION](PUBLICATION.md)。这不包含真实模型、真实用户或教育效果评测。上文的「未验证公网Pages/远程Actions」是发布前记录，现已由本段更新。

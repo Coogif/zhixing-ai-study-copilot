@@ -1,6 +1,6 @@
 # 发布到独立新 GitHub 仓库
 
-当前状态：本地发布准备完成；**尚未创建远程仓库、推送、执行GitHub Actions或验收公网Pages**。只处理当前项目，不访问或改变其他仓库。
+当前项目已发布：[公开仓库](https://github.com/Coogif/zhixing-ai-study-copilot) · [在线演示](https://coogif.github.io/zhixing-ai-study-copilot/) · [本次上线记录](PUBLICATION.md)。只处理当前项目，未访问或改变其他仓库。下文作为后续复现指南，已发布的仓库无需重复新建。
 
 ## 1. 发布前本地检查
 
@@ -21,7 +21,7 @@ Windows测试使用已安装的Edge；Linux/CI使用安装的Chromium。核心�
 
 ## 2. 新建独立仓库并检查远程地址
 
-GitHub中创建空的公开新仓库，建议名`zhixing-ai-study-copilot`，不要初始化README。创建是用户下一步操作，本轮没有代为创建。
+GitHub中创建空的公开新仓库，建议名`zhixing-ai-study-copilot`，不要初始化README。本项目已按用户授权完成创建；仅在发布自己的新副本时重复本节。
 
 在当前项目目录执行以下命令；`YOUR_ACCOUNT`必须替换为你实际的新仓库账号：
 
@@ -42,7 +42,7 @@ git remote -v
 git push -u origin main
 ```
 
-如果已有origin，先核对并确认，不能照抄命令覆盖其他仓库地址。当前目录是空历史仓库，本轮未自动创建提交。
+如果已有origin，先核对并确认，不能照抄命令覆盖其他仓库地址。当前目录已建立提交并关联本项目远程地址；发布副本前应重新核对。
 
 网页上传容易漏掉隐藏的`.github`与锁文件，优先用Git。不要上传node_modules、.cache、dist或测试缓存。`dist`由CI生成。
 
@@ -56,7 +56,7 @@ git push -u origin main
 
 参考实现依据：[GitHub自定义Pages工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)、[Playwright持续集成](https://playwright.dev/docs/ci)。实际动作版本已按本次官方文档核对；后续变更依赖应重新测试。
 
-## 4. 上线验收（尚待执行）
+## 4. 上线验收（本次已执行，后续发布需复验）
 
 从成功部署任务获取**真实URL**，然后逐项确认：
 

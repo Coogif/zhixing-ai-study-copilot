@@ -1,0 +1,18 @@
+{
+  "verifiedAt": "2026-10-31T13:59:16.927Z",
+  "url": "https://coogif.github.io/zhixing-ai-study-copilot/",
+  "browser": "156.0.4314.50",
+  "checks": [
+    "HTTPS homepage 200",
+    "Fictional demonstration metrics",
+    "Explained recommendation, submission, self-feedback, AI explicitly disabled",
+    "Review correction preserves first-attempt accuracy; reload persists records",
+    "Reset cancellation and confirmation",
+    "Hash routes survive direct refresh",
+    "320/390px: four live pages fit viewport",
+    "Environment/API/development files absent from public static site"
+  ],
+  "scriptErrors": 0,
+  "externalPageRequests": 0,
+  "note": "Isolated fictional records only; no model call, production user, or educational-effect evaluation"
+}
