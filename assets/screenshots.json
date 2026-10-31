@@ -1,0 +1,32 @@
+{
+  "capturedAt": "2026-10-31T13:50:50.996Z",
+  "timezone": "Asia/Shanghai",
+  "browser": "Chromium via Playwright (Windows uses installed Edge)",
+  "method": "Unmodified browser screenshots: desktop full-page and mobile viewport; isolated fictional records; no model call",
+  "images": [
+    {
+      "file": "demo-dashboard.png",
+      "label": "空数据总览，1440px"
+    },
+    {
+      "file": "demo-with-data.png",
+      "label": "8 次虚构作答、7 道首答、57%、4 道到期题"
+    },
+    {
+      "file": "demo-practice.png",
+      "label": "虚构练习，错答、预写解析与可选自评"
+    },
+    {
+      "file": "demo-review.png",
+      "label": "到期题、未到期错题、后续计划"
+    },
+    {
+      "file": "demo-product.png",
+      "label": "产品边界与指标计划"
+    },
+    {
+      "file": "mobile-dashboard.png",
+      "label": "390×844px 移动总览首屏，虚构演示数据"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="知行 AI：从一次练习到下一步行动的个性化学习产品原型。" />
+  <meta name="theme-color" content="#f5f6fb" />
+  <title>知行 AI · 个性化学习助手</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#app">跳到主要内容</a>
+<div class="shell">
+  <aside class="sidebar" aria-label="主导航">
+    <a class="brand" href="#dashboard" data-view="dashboard" aria-label="知行 AI 首页"><span class="brand-icon">知<span>·</span></span><span>知行 <strong>AI</strong><small>LEARN WITH CLARITY</small></span></a>
+    <div class="side-category">WORKSPACE</div>
+    <nav class="side-nav">
+      <button class="nav-item active" data-view="dashboard" aria-label="学习总览"><span class="nav-ico" aria-hidden="true">◫</span><span>学习总览</span></button>
+      <button class="nav-item" data-view="practice" aria-label="智能练习"><span class="nav-ico" aria-hidden="true">▤</span><span>智能练习</span></button>
+      <button class="nav-item" data-view="review" aria-label="复习计划"><span class="nav-ico" aria-hidden="true">◎</span><span>复习计划</span><span class="nav-dot" id="review-count"></span></button>
+      <button class="nav-item" data-view="product" aria-label="产品方案"><span class="nav-ico" aria-hidden="true">◇</span><span>产品方案</span></button>
+    </nav>
+    <div class="side-category second">KNOWLEDGE AREAS</div>
+    <div class="subject-links"><button data-view="practice" data-topic="growth"><span class="topic-glyph violet">↗</span> 资料分析</button><button data-view="practice" data-topic="logic"><span class="topic-glyph orange">◇</span> 判断推理</button><button data-view="practice" data-topic="sets"><span class="topic-glyph green">⊕</span> 数量关系</button></div>
+    <div class="sidebar-bottom">
+      <div class="help-card"><div class="help-glyph">✦</div><strong>练习之外，更要看见进步</strong><p>记录真实作答，发现薄弱环节，推荐下一步行动。</p><a href="docs/PRD.md" target="_blank">阅读产品 PRD <span>↗</span></a></div>
+      <div class="account"><div class="avatar">学</div><div><strong>体验用户</strong><span>本地演示模式</span></div><span class="account-more">···</span></div>
+    </div>
+  </aside>
+  <div class="main-region">
+    <header class="topbar"><div class="crumb"><span>学习空间</span><b>/</b><strong id="current-page-title">学习总览</strong></div><div class="top-actions"><span class="demo-pill"><i></i>产品原型 · Demo</span><button class="top-icon-btn" id="reset-button" title="清空本地学习记录">↻ <span>重置数据</span></button></div></header>
+    <main class="content" id="app" tabindex="-1"></main>
+    <footer class="footer">知行 AI · Product MVP v0.2 <span>AI 辅助开发 · 原创样例题 · 本地记录 · 规则推荐</span></footer>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript>请启用 JavaScript 来使用练习功能。产品文档位于 docs/PRD.md。</noscript>
+<script type="module" src="src/app.js"></script>
+</body>
+</html>

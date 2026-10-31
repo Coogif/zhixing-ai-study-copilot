@@ -1,0 +1,23 @@
+{
+  "name": "zhixing-ai-study-copilot",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "An honest, working AI-assisted adaptive practice MVP and product-management portfolio project.",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "preview": "node scripts/build-preview.mjs",
+    "build": "node scripts/build-preview.mjs && node scripts/build-pages.mjs",
+    "screenshots": "node scripts/capture.mjs",
+    "verify:release": "node scripts/verify-release.mjs",
+    "test:e2e": "node --test tests/e2e/*.test.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

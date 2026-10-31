@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="知行 AI：从一次练习到下一步行动的个性化学习产品原型。" />
+  <meta name="theme-color" content="#f5f6fb" />
+  <title>知行 AI · 个性化学习助手</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTgiIGZpbGw9IiMyNjI1NGEiLz48cGF0aCBkPSJNMTMgMjFoMzhNMTggMzFoMjhNMjQgNDJoMTYiIHN0cm9rZT0iI2E1ZjBjZiIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI0NiIgY3k9IjQ1IiByPSI1IiBmaWxsPSIjZjRiODkyIi8+PC9zdmc+Cg==" />
+  <style>
+:root{font-family:'DM Sans','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;color:#292b44;background:#f6f7fb;font-synthesis:none;-webkit-font-smoothing:antialiased;--ink:#282945;--sub:#9294a7;--purple:#6f68d9;--surface:#fff;--line:#e9eaf3;--shadow:0 12px 36px rgba(49,50,93,.045)}
+*{box-sizing:border-box}body{margin:0;min-width:320px}button,a{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}button:focus-visible,a:focus-visible{outline:3px solid #8b82ff;outline-offset:3px} .shell{display:flex;min-height:100vh}.sidebar{width:246px;background:#fff;box-shadow:1px 0 0 #eaeaf2;position:fixed;inset:0 auto 0 0;z-index:3;display:flex;flex-direction:column;padding:31px 16px 19px}.brand{display:flex;align-items:center;gap:11px;padding:0 11px;margin-bottom:47px;color:#242541;font-size:21px;font-weight:800;letter-spacing:-.3px}.brand-icon{width:43px;height:43px;background:#292849;color:#fff;display:grid;place-items:center;border-radius:14px;font-weight:800;font-size:21px}.brand-icon span{color:#b6edd8}.brand strong{color:#746de0}.brand small{display:block;letter-spacing:1.5px;font-size:8px;color:#aaaac0;font-weight:800;margin-top:2px}.side-category{font-size:10px;letter-spacing:1.45px;font-weight:800;color:#b4b7c6;padding:0 15px;margin-bottom:12px}.side-category.second{margin-top:37px}.side-nav{display:flex;flex-direction:column;gap:5px}.nav-item,.subject-links button{border:0;background:transparent;display:flex;align-items:center;gap:13px;color:#85879d;width:100%;text-align:left;border-radius:12px;padding:13px 15px;font-size:13px;font-weight:600;transition:.2s}.nav-item:hover,.subject-links button:hover{background:#f5f4fe;color:#615bcc}.nav-item.active{background:#eeeefe;color:#665fd4}.nav-ico{font-size:21px;width:22px;line-height:18px;font-weight:500}.nav-dot{margin-left:auto;background:#6d66dc;color:white;font-size:10px;border-radius:30px;padding:2px 6px;display:none}.nav-dot.show{display:inline}.subject-links button{padding:10px 15px;font-size:13px}.topic-glyph{width:27px;height:27px;display:inline-grid;place-items:center;border-radius:9px;font-size:17px}.topic-glyph.violet{background:#f0ecff;color:#8273d9}.topic-glyph.orange{background:#fff1e9;color:#e9a377}.topic-glyph.green{background:#e6f6ef;color:#57ad91}.sidebar-bottom{margin-top:auto}.help-card{padding:18px 17px;background:linear-gradient(145deg,#efefff,#f6f7ff);border-radius:14px;margin:0 3px 22px}.help-glyph{font-size:23px;color:#7a72db;margin-bottom:9px}.help-card strong{font-size:12px;line-height:1.6}.help-card p{color:#9c9bb4;font-size:11px;line-height:1.8}.help-card a{font-size:11px;color:#6b64d5;font-weight:800}.help-card a span{margin-left:3px}.account{display:flex;align-items:center;gap:9px;border-top:1px solid #f1f1f5;padding:20px 8px 0}.avatar{height:34px;width:34px;background:#e7e8f8;color:#6560c3;display:grid;place-items:center;border-radius:10px;font-weight:800;font-size:14px}.account strong,.account span{display:block}.account strong{font-size:12px}.account span{color:#a6a7b8;font-size:10px;margin-top:3px}.account-more{margin-left:auto;font-size:20px!important}.main-region{margin-left:246px;min-width:0;flex:1;display:flex;flex-direction:column}.topbar{height:78px;background:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eeeeF4;padding:0 45px}.crumb{display:flex;gap:14px;font-size:13px;color:#a5a6b8}.crumb b{font-weight:400;color:#d2d2de}.crumb strong{color:#44455f;font-weight:700}.top-actions{display:flex;align-items:center;gap:24px}.demo-pill{border-radius:999px;background:#eff9f5;color:#4a9b78;padding:8px 13px;font-size:11px;font-weight:700}.demo-pill i{display:inline-block;width:6px;height:6px;background:#67c99a;border-radius:50%;margin-right:5px}.top-icon-btn{border:0;background:transparent;color:#999cb1;font-size:18px}.top-icon-btn span{font-size:11px;vertical-align:2px}.content{max-width:1270px;width:100%;padding:39px 45px 50px;margin:0 auto;flex:1}.footer{font-size:10px;color:#b3b5c5;padding:0 45px 24px;display:flex;justify-content:space-between;gap:20px}.eyebrow{color:#7c78d9;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:2px}.page-header{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:26px}.page-header h1{font-size:27px;letter-spacing:-.75px;margin:6px 0 8px;line-height:1.35}.page-header p{font-size:12px;color:#9699aa;margin:0;line-height:1.8}.btn{border:0;padding:12px 18px;border-radius:11px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:12px;font-weight:800;white-space:nowrap}.btn-primary{color:#fff;background:#6964d7;box-shadow:0 8px 20px rgba(101,93,217,.20)}.btn-primary:hover{background:#5851c4}.btn-secondary{background:#f0efff;color:#655fcd}.btn-neutral{border:1px solid #e7e8f1;background:#fff;color:#6a6b84}.btn:disabled{opacity:.43;cursor:not-allowed;box-shadow:none}.hero{border-radius:19px;background:linear-gradient(111deg,#34345e,#45417b 67%,#5b52a2);color:#fff;min-height:195px;display:flex;align-items:center;justify-content:space-between;overflow:hidden;position:relative;padding:29px 33px;margin-bottom:23px}.hero::after{content:'';position:absolute;width:320px;height:320px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:80px;top:-196px;box-shadow:0 0 0 52px rgba(255,255,255,.035),0 0 0 105px rgba(255,255,255,.025)}.hero-content{position:relative;z-index:1;max-width:465px}.hero-tag{font-size:10px;letter-spacing:1px;color:#cfcbfa;font-weight:800}.hero h2{margin:11px 0;font-size:22px;font-weight:800}.hero p{color:#d0ceeb;line-height:1.8;font-size:12px;margin-bottom:21px}.hero .btn{background:#b8eeda;color:#2b4362}.hero-art{position:relative;z-index:1;width:255px;height:154px;margin-right:40px}.art-card{position:absolute;width:174px;height:117px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.13);backdrop-filter:blur(5px);border-radius:15px;box-shadow:0 16px 35px rgba(0,0,0,.11);padding:19px;transform:rotate(-11deg);left:24px;top:5px}.art-card span{display:block;height:7px;border-radius:8px;background:rgba(255,255,255,.5);margin-bottom:12px}.art-card span:first-child{width:63%}.art-card span:nth-child(2){width:89%}.art-card span:nth-child(3){width:74%}.art-card.second{transform:rotate(9deg);left:89px;top:36px;background:#fff;border:0}.art-card.second span{background:#e8e7f8}.art-card.second .art-line{height:13px;width:86%;background:#aeeed8}.sparkle{position:absolute;color:#bff6db;font-size:27px;right:2px;top:1px}.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px;margin-bottom:28px}.stat-card{background:#fff;border:1px solid #eeeeF5;border-radius:15px;padding:21px 21px 18px;box-shadow:var(--shadow)}.stat-top{display:flex;align-items:center;justify-content:space-between}.stat-label{color:#9496a9;font-size:12px;font-weight:600}.stat-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#f0efff;color:#7771de;font-size:17px}.stat-card:nth-child(2) .stat-icon{background:#e7f8f3;color:#61b69b}.stat-card:nth-child(3) .stat-icon{background:#fff3e9;color:#e5ac7f}.stat-card:nth-child(4) .stat-icon{background:#eaf4ff;color:#78abde}.stat-value{font-size:29px;font-weight:800;margin:15px 0 7px;letter-spacing:-.5px;line-height:1}.stat-value small{font-size:15px;margin-left:3px}.stat-foot{color:#b1b2c2;font-size:10px}.section-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,1fr);gap:19px;margin-top:20px}.panel{background:#fff;border:1px solid #ededf3;border-radius:16px;padding:24px;box-shadow:var(--shadow)}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:25px}.panel-head h3{font-size:15px;margin:0}.panel-head a,.inline-link{color:#7971d8;font-size:11px;font-weight:700;border:none;background:none}.panel-head span{color:#b0b2c3;font-size:10px}.topic-row{margin-bottom:21px}.topic-row:last-child{margin-bottom:1px}.topic-first{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px;font-size:12px;font-weight:700}.topic-first .topic-left{display:flex;align-items:center;gap:10px}.topic-first .topic-right{color:#8c8ea4;font-size:11px;font-weight:600}.topic-first .topic-right strong{color:#57566c;font-weight:800}.progress-track{height:7px;background:#f1f1f6;border-radius:100px;overflow:hidden}.progress-fill{height:100%;border-radius:100px;background:#9388ee;transition:width .4s}.progress-fill.cyan{background:#67c7d8}.progress-fill.orange{background:#f4b48b}.progress-fill.green{background:#75cba5}.insight-card{background:#f5f3ff;border-radius:12px;padding:17px;margin-bottom:15px}.insight-title{display:flex;align-items:center;gap:9px;color:#6d64ca;font-size:12px;font-weight:800}.insight-title span{font-size:16px}.insight-card h4{margin:12px 0 7px;font-size:15px}.insight-card p{color:#83829e;font-size:11px;line-height:1.9;margin:0}.small-btn{font-size:11px;font-weight:800;padding:11px 14px;border:0;border-radius:9px;background:#6c64d5;color:#fff}.mini-list{display:flex;flex-direction:column;gap:12px}.mini-list-item{display:flex;align-items:center;gap:12px}.mini-dot{width:30px;height:30px;border-radius:9px;background:#eef0fe;display:grid;place-items:center;color:#7d77d6;font-size:15px}.mini-list-item strong,.mini-list-item span{display:block}.mini-list-item strong{font-size:12px}.mini-list-item span{font-size:10px;color:#a0a1b4;margin-top:4px}.mini-list-item .mini-status{margin-left:auto;color:#b1b3c0;font-size:11px}.mini-status.good{color:#54ae91}.mini-status.bad{color:#e58c78}.empty{border:1px dashed #dddfee;background:#fafaff;border-radius:12px;text-align:center;padding:28px;color:#8b8fa7;font-size:12px;line-height:1.9}.empty strong{display:block;color:#50536d;font-size:14px}.empty .empty-icon{font-size:30px;color:#9c95df;margin-bottom:7px}.practice-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(250px,.84fr);gap:20px}.picker{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.chip{border-radius:20px;padding:9px 13px;border:1px solid #e6e6ef;background:#fff;color:#9294a8;font-weight:700;font-size:11px}.chip.active{background:#eeedff;border-color:#dddbff;color:#6760d0}.question-card{padding:28px}.question-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.q-tag{font-size:11px;padding:7px 11px;background:#f0efff;color:#746bd6;border-radius:7px;font-weight:800}.q-difficulty{color:#a4a6b9;font-size:11px}.q-index{font-size:11px;color:#b2b3c1}.question-card h2{font-size:20px;line-height:1.5;margin:0 0 13px}.question-stem{font-size:14px;line-height:2;color:#50516c;margin-bottom:27px}.options{display:flex;flex-direction:column;gap:11px}.option{border:1px solid #e7e8f1;border-radius:11px;padding:14px 16px;background:#fff;display:flex;gap:13px;align-items:center;text-align:left;font-size:12px;color:#56586e;line-height:1.6;transition:.15s;width:100%}.option:hover:not(:disabled){border-color:#a9a4eb;background:#f9f8ff}.option:disabled{cursor:default}.option.selected{border-color:#7b74db;background:#f5f3ff}.option.correct{border-color:#70c9a6;background:#effbf6}.option.incorrect{border-color:#e99490;background:#fff5f4}.option-letter{height:27px;width:27px;border-radius:8px;background:#f0f1f7;display:grid;place-items:center;flex-shrink:0;font-size:12px;font-weight:800;color:#8a8da4}.option.correct .option-letter{background:#70c9a6;color:white}.option.incorrect .option-letter{background:#e99490;color:white}.question-actions{border-top:1px solid #efeff5;margin-top:25px;padding-top:22px;display:flex;justify-content:space-between;align-items:center;gap:10px}.answer-result{border-radius:12px;margin-top:18px;padding:19px 20px;background:#f6f7fb}.answer-result.good{background:#effaf5}.answer-result.bad{background:#fff6f2}.answer-result strong{font-size:13px;color:#4a4b65}.answer-result p,.answer-result li{font-size:12px;line-height:1.9;color:#666a80}.answer-result ol{padding-left:20px;margin:10px 0 8px}.answer-result .trap{margin:10px 0 0;color:#b97c60;font-size:11px}.aside-card{padding:22px}.aside-card h3{margin:0 0 19px;font-size:14px}.method-box{padding:15px;background:#f7f8fc;border:1px solid #eff0f6;border-radius:10px;margin-bottom:18px}.method-box strong{font-size:12px}.method-box p{font-size:11px;line-height:1.9;color:#8e90a3}.question-aside-foot{font-size:11px;color:#a0a3b4;line-height:1.9}.concept-pill{font-size:10px;color:#4fa789;background:#ecf8f1;border-radius:6px;padding:5px 8px;display:inline-block;margin-bottom:13px}.explain-btn{width:100%;background:#fff;border:1px solid #d9d5ff;color:#6c62d4;margin-top:12px}.explain-output{font-size:12px;line-height:1.8;white-space:pre-wrap;background:#faf9ff;border-radius:8px;padding:14px;margin-top:12px;color:#595b70}.review-item{border:1px solid #e9e9f2;border-radius:12px;padding:16px;display:flex;align-items:center;gap:13px;margin-bottom:12px}.review-item .review-name{flex:1}.review-item strong{display:block;font-size:12px}.review-item span{display:block;color:#aaabbd;font-size:10px;margin-top:5px}.review-section{max-width:900px}.review-badge{padding:6px 8px;background:#fff3e9;color:#b98a65;border-radius:7px;font-size:10px}.review-item .btn{padding:9px 14px}.detail-list{display:grid;grid-template-columns:1fr 1fr;gap:17px}.detail-tile{padding:23px;border:1px solid #efeff7;border-radius:13px}.detail-num{font-weight:800;color:#7770df;font-size:25px}.detail-tile h3{font-size:13px;margin:11px 0 7px}.detail-tile p{font-size:11px;line-height:1.9;color:#999caf;margin:0}.prd-flow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:20px}.flow-step{font-size:11px;padding:13px 15px;background:#f2f1ff;border-radius:10px;color:#655fc8;font-weight:700}.flow-arrow{color:#b5b0de}.callout{background:#f4f7ff;border-left:3px solid #7875dc;border-radius:8px;padding:18px;color:#6d718b;font-size:12px;line-height:1.9}.callout strong{color:#42455e}.product-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}.metric-table{border-collapse:collapse;width:100%;font-size:11px}.metric-table td,.metric-table th{padding:14px 6px;text-align:left;border-bottom:1px solid #f0f0f6}.metric-table th{color:#9395aa;font-weight:700}.metric-table td{color:#595c74}.disclaimer{font-size:11px;line-height:2;color:#9a9eaf}.disclaimer strong{color:#7169cb}.toast{position:fixed;bottom:28px;right:30px;z-index:99;background:#2f3152;color:#fff;border-radius:10px;padding:13px 19px;box-shadow:0 12px 36px rgba(0,0,0,.2);font-size:12px;opacity:0;pointer-events:none;transform:translateY(12px);transition:.2s}.toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:1120px){.sidebar{width:210px}.main-region{margin-left:210px}.content{padding:32px 26px}.topbar{padding:0 26px}.hero-art{margin-right:0}.stats-grid{gap:10px}.stat-card{padding:16px}.footer{padding:0 26px 24px}}
+@media(max-width:860px){.sidebar{width:70px;padding:20px 9px}.brand{padding:0;margin:0 auto 39px}.brand>span:last-child,.side-category,.nav-item>span:not(.nav-ico),.subject-links,.sidebar-bottom,.nav-dot{display:none!important}.nav-item{justify-content:center;padding:14px}.nav-ico{width:auto}.main-region{margin-left:70px}.section-grid,.practice-layout,.product-columns{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.hero-art{opacity:.45;position:absolute;right:0}.footer span{display:none}}
+@media(max-width:570px){.sidebar{position:fixed;inset:auto 0 0 0;height:62px;width:auto;flex-direction:row;align-items:center;padding:7px 10px;box-shadow:0 -2px 18px #e7e6ef}.sidebar .brand,.sidebar .side-category,.sidebar .subject-links,.sidebar .sidebar-bottom{display:none}.side-nav{display:flex;flex-direction:row;width:100%;justify-content:space-between}.nav-item{width:25%;padding:8px;flex-direction:column;gap:3px;font-size:10px}.nav-item>span:not(.nav-ico){display:inline!important;font-size:10px}.nav-ico{font-size:19px}.main-region{margin-left:0;padding-bottom:68px}.topbar{height:61px;padding:0 16px}.content{padding:24px 15px}.top-actions{gap:9px}.top-icon-btn span{display:none}.demo-pill{font-size:9px}.page-header{align-items:start;flex-direction:column}.page-header h1{font-size:23px}.hero{padding:24px 21px;min-height:189px}.hero h2{font-size:20px}.hero-art{right:-115px}.hero-content{max-width:85%}.stat-card{padding:16px}.stat-value{font-size:24px}.panel{padding:18px}.question-card h2{font-size:18px}.question-card{padding:19px}.footer{padding:0 15px 24px}.detail-list{grid-template-columns:1fr}}
+/* v0.2: evidence, feedback and touch accessibility; retain the original visual system. */
+:root{--sub:#62667d}
+.page-header p,.stat-label,.stat-foot,.panel-head span,.question-aside-foot,.disclaimer,.method-box p,.review-item span,.detail-tile p,.insight-card p,.mini-list-item span{color:#63677f}
+.crumb,.top-icon-btn,.chip,.nav-item,.subject-links button,.q-difficulty,.q-index{color:#62667d}
+.panel-head{flex-wrap:wrap;align-items:flex-start}.panel-head span{line-height:1.6}
+.topic-evidence{font-size:12px;line-height:1.7;color:#62667d;margin:0 0 8px}
+.data-notice,.recommendation-note{padding:16px 20px;background:#efedff;border:1px solid #dbd8f4;border-radius:12px;margin-bottom:22px;color:#49456f;font-size:13px;line-height:1.8}
+.data-notice.warning{background:#fff5e7;border-color:#efcf9f;color:#735126}
+.recommendation-note p{margin:5px 0}.recommendation-note span{font-size:12px}.next-question{font-weight:700;margin-top:12px!important}
+.feedback-box{padding:16px 0;font-size:13px;color:#50536d;line-height:1.8}.feedback-box p{margin:10px 0}.feedback-options{display:flex;gap:8px;flex-wrap:wrap}
+.chip[aria-pressed=true]{background:#e9e6ff;border-color:#7368c8;color:#4c4199}
+.btn,.chip,.small-btn,.top-icon-btn{min-height:44px}.top-icon-btn{min-width:44px}
+.review-item .review-name{min-width:0}.review-item strong,.review-item span{overflow-wrap:anywhere}.review-badge{white-space:nowrap}
+.skip-link{position:fixed;top:-80px;left:20px;padding:12px;background:#fff;z-index:100;border:2px solid #6f68d9}.skip-link:focus{top:10px}
+.answer-result:focus{outline:2px solid #776ad5;outline-offset:4px}
+@media(max-width:570px){.review-item{flex-wrap:wrap;gap:10px}.review-name{flex-basis:calc(100% - 44px)!important}.review-badge{margin-left:37px}.review-item .btn{margin-left:auto}.question-top{flex-wrap:wrap;gap:10px}.question-actions{flex-wrap:wrap}.panel-head{gap:8px}.topic-first{gap:8px}.topic-right{white-space:nowrap}.hero-content{max-width:100%}.hero-art{display:none}.nav-item{min-height:48px}.sidebar{height:74px;padding-bottom:calc(7px + env(safe-area-inset-bottom))}.main-region{padding-bottom:calc(84px + env(safe-area-inset-bottom))}.sidebar{height:calc(74px + env(safe-area-inset-bottom))}.data-notice,.recommendation-note{padding:13px 15px}.toast{left:15px;right:15px;bottom:95px}.top-icon-btn span{display:inline;font-size:11px}.top-actions .demo-pill{display:none}.question-stem{font-size:15px}.option{font-size:14px}.topic-evidence{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
+@media(max-width:570px){.nav-item{position:relative;justify-content:center;height:58px}.nav-dot.show{position:absolute;right:8px;top:0;margin:0!important;font-size:9px!important;padding:1px 5px}}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#app">跳到主要内容</a>
+<div class="shell">
+  <aside class="sidebar" aria-label="主导航">
+    <a class="brand" href="#dashboard" data-view="dashboard" aria-label="知行 AI 首页"><span class="brand-icon">知<span>·</span></span><span>知行 <strong>AI</strong><small>LEARN WITH CLARITY</small></span></a>
+    <div class="side-category">WORKSPACE</div>
+    <nav class="side-nav">
+      <button class="nav-item active" data-view="dashboard" aria-label="学习总览"><span class="nav-ico" aria-hidden="true">◫</span><span>学习总览</span></button>
+      <button class="nav-item" data-view="practice" aria-label="智能练习"><span class="nav-ico" aria-hidden="true">▤</span><span>智能练习</span></button>
+      <button class="nav-item" data-view="review" aria-label="复习计划"><span class="nav-ico" aria-hidden="true">◎</span><span>复习计划</span><span class="nav-dot" id="review-count"></span></button>
+      <button class="nav-item" data-view="product" aria-label="产品方案"><span class="nav-ico" aria-hidden="true">◇</span><span>产品方案</span></button>
+    </nav>
+    <div class="side-category second">KNOWLEDGE AREAS</div>
+    <div class="subject-links"><button data-view="practice" data-topic="growth"><span class="topic-glyph violet">↗</span> 资料分析</button><button data-view="practice" data-topic="logic"><span class="topic-glyph orange">◇</span> 判断推理</button><button data-view="practice" data-topic="sets"><span class="topic-glyph green">⊕</span> 数量关系</button></div>
+    <div class="sidebar-bottom">
+      <div class="help-card"><div class="help-glyph">✦</div><strong>练习之外，更要看见进步</strong><p>记录真实作答，发现薄弱环节，推荐下一步行动。</p><a href="docs/PRD.md" target="_blank">阅读产品 PRD <span>↗</span></a></div>
+      <div class="account"><div class="avatar">学</div><div><strong>体验用户</strong><span>本地演示模式</span></div><span class="account-more">···</span></div>
+    </div>
+  </aside>
+  <div class="main-region">
+    <header class="topbar"><div class="crumb"><span>学习空间</span><b>/</b><strong id="current-page-title">学习总览</strong></div><div class="top-actions"><span class="demo-pill"><i></i>产品原型 · Demo</span><button class="top-icon-btn" id="reset-button" title="清空本地学习记录">↻ <span>重置数据</span></button></div></header>
+    <main class="content" id="app" tabindex="-1"></main>
+    <footer class="footer">知行 AI · Product MVP v0.2 <span>AI 辅助开发 · 原创样例题 · 本地记录 · 规则推荐</span></footer>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript>请启用 JavaScript 来使用练习功能。产品文档位于 docs/PRD.md。</noscript>
+<script>
+// All questions are original demonstration examples, not copied exam papers.
+const TOPICS = [
+  { id: 'growth', label: '增长率计算', group: '资料分析', color: 'violet', icon: '↗', method: '增长率 =（现期量 - 基期量）÷ 基期量' },
+  { id: 'base', label: '基期量计算', group: '资料分析', color: 'cyan', icon: '∑', method: '基期量 = 现期量 ÷ (1 + 增长率)' },
+  { id: 'logic', label: '因果论证削弱', group: '判断推理', color: 'orange', icon: '◇', method: '辨别因果方向，优先考虑直接削弱因果关系的证据' },
+  { id: 'sets', label: '容斥原理', group: '数量关系', color: 'green', icon: '⊕', method: '两集合 A∪B=A+B-A∩B；三集合需加回三者交集' }
+];
+
+const QUESTIONS = [
+  {
+    id: 'g1', topic: 'growth', difficulty: 1, title: '增长率 · 基础识别',
+    stem: '某地区去年接待游客 100 万人次，今年接待游客 120 万人次。今年游客接待量同比增长多少？',
+    options: ['16.7%', '20%', '25%', '120%'], answer: 1,
+    analysis: ['先定位：现期量为 120，基期量为 100。', '套用增长率公式：(120 - 100) ÷ 100 = 0.20。', '因此同比增长 20%，选 B。'],
+    trap: '不要把差值 20 除以现期量 120。'
+  },
+  {
+    id: 'g2', topic: 'growth', difficulty: 2, title: '增长率 · 表格信息',
+    stem: '某公司 2024 年营业收入为 150 万元，2025 年为 180 万元。2025 年收入的同比增速是多少？',
+    options: ['15%', '16.7%', '20%', '30%'], answer: 2,
+    analysis: ['现期量 = 180，基期量 = 150。', '(180 - 150) ÷ 150 = 30 ÷ 150 = 20%。', '选 C。'],
+    trap: '同比增速必须以去年（基期）数值作分母。'
+  },
+  {
+    id: 'g3', topic: 'growth', difficulty: 2, title: '增长率 · 数据对比',
+    stem: '一个图书馆今年借阅图书 2600 册，去年为 2000 册。今年借阅量同比增长多少？',
+    options: ['23.1%', '26%', '30%', '60%'], answer: 2,
+    analysis: ['增长量 = 2600 - 2000 = 600。', '增长率 = 600 ÷ 2000 = 30%。', '选 C。'],
+    trap: '增长量与增长率不同：600 册是增长量，30% 才是增长率。'
+  },
+  {
+    id: 'b1', topic: 'base', difficulty: 1, title: '基期量 · 公式识别',
+    stem: '某产品今年销量 120 件，比去年增长 20%。去年销量是多少件？',
+    options: ['96 件', '100 件', '105 件', '144 件'], answer: 1,
+    analysis: ['题目已知现期量 120、增长率 20%，求基期量。', '基期量 = 120 ÷ (1 + 20%) = 120 ÷ 1.2。', '结果为 100 件，选 B。'],
+    trap: '不能直接用 120 × (1 - 20%)，这不是基期量公式。'
+  },
+  {
+    id: 'b2', topic: 'base', difficulty: 2, title: '基期量 · 百分数转换',
+    stem: '某地 2025 年粮食产量为 240 吨，同比增加 20%。2024 年产量约为多少吨？',
+    options: ['192 吨', '200 吨', '220 吨', '288 吨'], answer: 1,
+    analysis: ['2025 年为现期，2024 年为基期。', '基期量 = 240 ÷ 1.2 = 200。', '选 B。'],
+    trap: '“同比增加”与“比上年增长”都指相对基期的变化。'
+  },
+  {
+    id: 'b3', topic: 'base', difficulty: 2, title: '基期量 · 易错比较',
+    stem: '某网站本月注册用户 1320 人，比上月增长 10%。上月注册用户约有多少人？',
+    options: ['1188 人', '1200 人', '1300 人', '1452 人'], answer: 1,
+    analysis: ['已知现期 1320、增长率 10%，求上月。', '1320 ÷ (1 + 0.10) = 1320 ÷ 1.1 = 1200。', '选 B。'],
+    trap: '1320 - 1320×10% = 1188 是常见误算。'
+  },
+  {
+    id: 'l1', topic: 'logic', difficulty: 1, title: '因果削弱 · 另有他因',
+    stem: '有人认为：某学校推行晨读后，学生英语成绩提高，因此晨读是成绩提高的原因。以下哪项最能削弱？',
+    options: ['学生普遍喜欢晨读', '学校同时更换了更有效的英语教材，且其他未晨读班级也显著提高', '晨读时间是每天 20 分钟', '晨读前学生成绩不完全相同'], answer: 1,
+    analysis: ['论点：晨读导致英语成绩提高。', 'B 提供了一个更有解释力的替代原因，并加入对照信息。', '这会削弱晨读与提高成绩之间的因果联系，选 B。'],
+    trap: '仅说明晨读受欢迎或时长，不足以削弱因果结论。'
+  },
+  {
+    id: 'l2', topic: 'logic', difficulty: 2, title: '因果削弱 · 因果倒置',
+    stem: '调查发现，经常阅读的人写作能力更好，因此有人说“多阅读一定使写作能力提高”。哪项最能质疑？',
+    options: ['优秀写作者通常更喜欢阅读，因此他们阅读更频繁', '图书馆的借阅人数增加', '许多作者推荐阅读', '部分学生每天阅读半小时'], answer: 0,
+    analysis: ['论据是阅读频率和写作能力相关。', 'A 指出可能存在反向因果：写作能力强的人更爱阅读。', '由相关性直接推出单向因果缺少充分依据，选 A。'],
+    trap: '相关不等于因果，尤其要检查因果方向。'
+  },
+  {
+    id: 'l3', topic: 'logic', difficulty: 2, title: '因果削弱 · 无因有果',
+    stem: '某企业认为新的工位布局提高了工作效率，因为改造后平均完成任务数上升。哪项最能削弱？',
+    options: ['员工喜欢明亮的办公室', '改造后的桌椅价格更高', '没有改造工位的同类团队同期完成任务数也以相近幅度上升', '工位改造获得管理层支持'], answer: 2,
+    analysis: ['论点是工位改造导致效率提高。', 'C 表明未接受改造的对照团队也出现同样提升。', '由此可怀疑是共同因素而非布局改造所致，选 C。'],
+    trap: '选择与因果链条有关的对照证据，不被无关背景干扰。'
+  },
+  {
+    id: 's1', topic: 'sets', difficulty: 1, title: '容斥 · 两集合',
+    stem: '一个社团有 30 人会摄影、25 人会剪辑，其中 10 人两者都会。至少会其中一项的有多少人？',
+    options: ['35 人', '40 人', '45 人', '55 人'], answer: 2,
+    analysis: ['这是两个集合的并集。', '至少会一项 = 30 + 25 - 10。', '得到 45 人，选 C。'],
+    trap: '两者都会的人被重复计数，需要减去一次。'
+  },
+  {
+    id: 's2', topic: 'sets', difficulty: 2, title: '容斥 · 交集处理',
+    stem: '班级中 18 人喜欢篮球、20 人喜欢足球、8 人两项都喜欢。至少喜欢其中一项的有多少人？',
+    options: ['22 人', '30 人', '38 人', '46 人'], answer: 1,
+    analysis: ['套用两集合容斥公式：18 + 20 - 8。', '得到 30 人，选 B。', '注意“至少一项”包含两项都喜欢的人。'],
+    trap: '不要误把 8 人从两个集合各减一次。'
+  },
+  {
+    id: 's3', topic: 'sets', difficulty: 3, title: '容斥 · 三集合',
+    stem: '某活动有 20 人报名 A 项、22 人报名 B 项、18 人报名 C 项；A、B 同报 7 人，A、C 同报 6 人，B、C 同报 5 人，三项都报 3 人（两两人数含三项共同者）。至少报名一项的有多少人？',
+    options: ['39 人', '42 人', '45 人', '48 人'], answer: 2,
+    analysis: ['三集合并集 = 三个单项之和 - 三个两两交集 + 三者交集。', '20 + 22 + 18 - 7 - 6 - 5 + 3 = 45。', '选 C。'],
+    trap: '减去两两交集时三者公共部分被多减，最后要加回一次。'
+  }
+];
+
+const getQuestion = (id) => QUESTIONS.find(q => q.id === id);
+const getTopic = (id) => TOPICS.find(t => t.id === id);
+
+
+
+// The recommendation engine is a transparent deterministic baseline, NOT an LLM.
+function topicStats(history = [], questions = QUESTIONS, topics = TOPICS) {
+  return topics.map(topic => {
+    const qs = questions.filter(q => q.topic === topic.id);
+    const records = history.filter(h => qs.some(q => q.id === h.questionId)).sort((a,b) => a.at - b.at);
+    const firstAttempts = new Map();
+    for (const r of records) if (!firstAttempts.has(r.questionId)) firstAttempts.set(r.questionId, r);
+    const firstCorrect = [...firstAttempts.values()].filter(a => a.correct).length;
+    const covered = firstAttempts.size;
+    const wrong = [...firstAttempts.values()].filter(a => !a.correct).length;
+    const accuracy = covered ? firstCorrect / covered : null;
+    return {
+      ...topic, total: qs.length, covered, attempts: records.length, firstCorrect,
+      firstAccuracy: accuracy, wrong, coverage: qs.length ? covered / qs.length : 0,
+      mastery: qs.length ? Math.round((firstCorrect / qs.length) * 100) : 0
+    };
+  });
+}
+
+function summaryStats(history = [], questions = QUESTIONS) {
+  const first = new Map();
+  const records = history.filter(h => questions.some(q => q.id === h.questionId));
+  for (const h of [...records].sort((a,b) => a.at - b.at)) {
+    if (!first.has(h.questionId)) first.set(h.questionId, h);
+  }
+  const firstRecords = [...first.values()];
+  return {
+    attempts: records.length,
+    covered: firstRecords.length,
+    total: questions.length,
+    firstCorrect: firstRecords.filter(h => h.correct).length,
+    firstAccuracy: firstRecords.length ? Math.round(100 * firstRecords.filter(h => h.correct).length / firstRecords.length) : null,
+    wrongQuestions: firstRecords.filter(h => !h.correct).length
+  };
+}
+
+function latestForQuestion(history, questionId) {
+  // Equal millisecond timestamps still preserve the most recently appended answer.
+  return history.reduce((latest, h) => h.questionId === questionId && (!latest || h.at >= latest.at) ? h : latest, null);
+}
+
+function reviewQueue(history = [], now = Date.now(), questions = QUESTIONS) {
+  const records = questions.map(q => ({ question: q, latest: latestForQuestion(history, q.id) })).filter(x => x.latest);
+  return records.filter(({latest}) => {
+    const age = now - latest.at;
+    const interval = latest.correct ? 3*86400000 : 86400000;
+    return age >= interval;
+  }).sort((a,b) => a.latest.at - b.latest.at);
+}
+
+function weakestTopic(history = [], questions = QUESTIONS, topics = TOPICS) {
+  const stats = topicStats(history, questions, topics);
+  const available = stats.filter(s => s.total > 0);
+  const withUnseen = available.filter(s => s.covered < s.total);
+  return [...(withUnseen.length ? withUnseen : available)].sort((a,b) => topicPriority(b, history, questions) - topicPriority(a, history, questions))[0];
+}
+
+function topicPriority(topic, history, questions) {
+  const unresolved = questions.filter(q => q.topic === topic.id && latestForQuestion(history, q.id)?.correct === false).length;
+  return unresolved * 4 + (1 - topic.coverage) * 2;
+}
+
+// The same decision object powers the dashboard, practice card and test assertions.
+function recommendation(history = [], { topicId = null, mode = 'adaptive', now = Date.now(), questions = QUESTIONS } = {}) {
+  const candidates = questions.filter(q => !topicId || q.topic === topicId);
+  const due = reviewQueue(history, now, candidates);
+  const wrong = candidates.filter(q => latestForQuestion(history, q.id)?.correct === false)
+    .sort((a,b) => latestForQuestion(history,a.id).at - latestForQuestion(history,b.id).at);
+  const decision = (question, kind, reason) => ({ question, kind, reason, topicId: question?.topic || null });
+  if (mode === 'review') {
+    if (due.length) return decision(due[0].question, 'due', '本题已到复习时间：最近答错间隔 1 天，答对间隔 3 天。');
+    if (wrong.length) return decision(wrong[0], 'wrong', '本题最近一次作答错误，尚未到期，也可以立即巩固。');
+    return decision(null, 'complete', '本轮复习完成：没有到期题或最近答错的题。');
+  }
+  const unseen = candidates.filter(q => !history.some(h => h.questionId === q.id));
+  if (unseen.length) {
+    const topic = weakestTopic(history, candidates)?.id;
+    const q = unseen.filter(q => q.topic === topic).sort((a,b) => a.difficulty - b.difficulty)[0] || unseen[0];
+    const stats = topicStats(history, questions).find(t => t.id === q.topic);
+    const unresolved = wrong.filter(w => w.topic === q.topic).length;
+    return decision(q, 'unseen', `「${stats?.label || q.topic}」已首答 ${stats?.covered || 0}/${stats?.total || 0} 题，最近仍答错 ${unresolved} 题。本题尚未作答；优先有错题且有新题的知识点，再按覆盖缺口和难度排序。`);
+  }
+  if (wrong.length) return decision(wrong[0], 'wrong', '所选范围内已无新题，优先复练最近仍答错且最久未练的一题。');
+  if (due.length) return decision(due[0].question, 'due', '所选范围内已无新题或未纠正错题，复测一题已到期的题。');
+  return decision(null, 'complete', '所选题目已覆盖，且没有待纠正或到期题。样例作答不代表已掌握知识点。');
+}
+
+function pickQuestion(history = [], options = {}) {
+  return recommendation(history, options).question;
+}
+
+function suggestedAction(history = [], questions = QUESTIONS) {
+  const result = recommendation(history, { questions });
+  const topic = TOPICS.find(t => t.id === result.topicId);
+  return { ...result, title: !result.question ? '本轮练习完成' : !history.length ? '从一道题开始诊断' : `下一题：${topic?.label || '针对性练习'}`, description: result.reason };
+}
+
+function seededDemoHistory(now = Date.now()) {
+  const d = n => now - n * 86400000;
+  return [
+    {questionId:'g1', topic:'growth', correct:true, selected:1, at:d(5)},
+    {questionId:'g2', topic:'growth', correct:false, selected:1, at:d(4)},
+    {questionId:'b1', topic:'base', correct:false, selected:0, at:d(3)},
+    {questionId:'l1', topic:'logic', correct:true, selected:1, at:d(3)},
+    {questionId:'s1', topic:'sets', correct:false, selected:3, at:d(2)},
+    {questionId:'g3', topic:'growth', correct:true, selected:2, at:d(2)},
+    {questionId:'b2', topic:'base', correct:true, selected:1, at:d(1)},
+    {questionId:'g2', topic:'growth', correct:true, selected:2, at:d(0.4)}
+  ];
+}
+
+
+
+const STORAGE_KEY = 'zhixing-study-mvp-v1';
+const ERROR_REASONS = { concept: '概念不清', method: '方法选错', careless: '读题或计算疏漏', unsure: '还不确定' };
+
+function normalizeSaved(value, now = Date.now()) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return { history: [], demo: false };
+  const history = (Array.isArray(value.history) ? value.history : []).flatMap(h => {
+    if (!h || typeof h !== 'object') return [];
+    const q = QUESTIONS.find(q => q.id === h.questionId);
+    if (!q || !Number.isInteger(h.selected) || h.selected < 0 || h.selected >= q.options.length ||
+        !Number.isFinite(h.at) || h.at < 0 || h.at > now + 300000) return [];
+    return [{ questionId: q.id, topic: q.topic, selected: h.selected, correct: h.selected === q.answer, at: h.at,
+      ...(Object.hasOwn(ERROR_REASONS, h.errorReason) ? { errorReason: h.errorReason } : {}),
+      ...(['yes', 'no'].includes(h.helpful) ? { helpful: h.helpful } : {}),
+      ...(h.mode === 'review' ? { mode: 'review' } : {}) }];
+  }).sort((a,b) => a.at - b.at);
+  return { history, demo: value.demo === true };
+}
+
+function readSaved(storage) {
+  try { return { ...normalizeSaved(JSON.parse(storage.getItem(STORAGE_KEY) || '{}')), warning: '' }; }
+  catch { return { history: [], demo: false, warning: '本地记录不可用或格式损坏。本次仍可练习；请检查浏览器存储设置。' }; }
+}
+
+
+
+
+
+const saved = readSaved({ getItem: key => localStorage.getItem(key) });
+const state = { view:'dashboard', topic:'all', history:saved.history, demo:saved.demo, questionId:null, selected:null, answered:false, practiceMode:'adaptive', aiResponse:'', aiLoading:false, generation:0, recommendation:null, attempt:null, aiAvailable:false, storageWarning:saved.warning };
+const app = document.querySelector('#app');
+const save = () => {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify({history:state.history, demo:state.demo})); }
+  catch { state.storageWarning='本次记录尚未持久保存：刷新可能丢失，请检查浏览器存储设置。'; toast(state.storageWarning); }
+};
+const pct = v => v == null ? '—' : `${Math.round(v * 100)}%`;
+const numPct = v => v == null ? '—' : `${v}%`;
+const escapeHtml = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let toastTimer;
+function toast(s) { const el=document.querySelector('#toast'); el.textContent=s; el.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove('show'),2600); }
+function navigate(view, topic) {
+  state.view=view;
+  if (topic) state.topic=topic;
+  if (view==='practice') { state.selected=null;state.answered=false; state.practiceMode='adaptive';setQuestion(); }
+  window.location.hash=view;
+  render();
+  window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+}
+function setQuestion({ mode=state.practiceMode, questionId=null }={}) {
+  state.generation++;
+  state.recommendation = questionId ? {question:getQuestion(questionId),reason:'你从复习清单选择了本题。先独立复测，再与首答比较。'} : recommendation(state.history,{topicId:state.topic==='all'?null:state.topic,mode});
+  const q = state.recommendation.question;
+  state.questionId=q?.id||null;
+  state.selected=null;
+  state.answered=false;
+  state.aiResponse='';
+  state.aiLoading=false;
+  state.attempt=null;
+}
+function showDashboard() {
+  const stats=summaryStats(state.history), topics=topicStats(state.history), next=suggestedAction(state.history);
+  const due=reviewQueue(state.history).length;
+  const history=[...state.history].sort((a,b)=>b.at-a.at).slice(0,4);
+  return `<div class="page-header"><div><div class="eyebrow">YOUR LEARNING SPACE</div><h1>今天，也向前一步 <span style="color:#b0b3c7;font-size:20px">✳</span></h1><p>不靠感觉判断掌握情况，用每一次真实作答找到下一步。</p></div><button class="btn btn-neutral" data-action="seed">${state.demo?'↻ 重新加载示例':'✦ 加载演示数据'}</button></div>
+    <section class="hero"><div class="hero-content"><div class="hero-tag">✧ PERSONALIZED LEARNING PATH</div><h2>比起做更多题，先做对下一题。</h2><p>围绕薄弱知识点持续练习，让知识诊断、练习和复盘形成闭环。</p><button class="btn" data-action="start">开始智能练习 <span>↗</span></button></div><div class="hero-art" aria-hidden="true"><div class="art-card"><span></span><span></span><span></span></div><div class="art-card second"><span></span><span class="art-line"></span><span></span></div><span class="sparkle">✦</span></div></section>
+    <div class="stats-grid"><div class="stat-card"><div class="stat-top"><span class="stat-label">累计作答</span><span class="stat-icon">▤</span></div><div class="stat-value">${stats.attempts}<small>题次</small></div><div class="stat-foot">包括重复练习</div></div>
+    <div class="stat-card"><div class="stat-top"><span class="stat-label">首次正确率</span><span class="stat-icon">◎</span></div><div class="stat-value">${numPct(stats.firstAccuracy)}</div><div class="stat-foot">${stats.covered ? `${stats.firstCorrect} / ${stats.covered} 道独立首答`:'尚无作答数据'}</div></div>
+    <div class="stat-card"><div class="stat-top"><span class="stat-label">已覆盖题目</span><span class="stat-icon">▥</span></div><div class="stat-value">${stats.covered}<small> / ${stats.total}</small></div><div class="stat-foot">基于示例题库的覆盖率</div></div>
+    <div class="stat-card"><div class="stat-top"><span class="stat-label">待复习题目</span><span class="stat-icon">↻</span></div><div class="stat-value">${due}<small>道</small></div><div class="stat-foot">按简易复习间隔生成</div></div></div>
+    <div class="section-grid"><section class="panel"><div class="panel-head"><h3>知识点首答表现</h3><span>首答正确率与题库覆盖分开显示</span></div>${topics.map(t=>{const unresolved=QUESTIONS.filter(q=>q.topic===t.id&&latestForQuestion(state.history,q.id)?.correct===false).length;return `<div class="topic-row"><div class="topic-first"><span class="topic-left"><span class="topic-glyph ${t.color}">${t.icon}</span>${t.label}</span><span class="topic-right"><strong>${t.covered?pct(t.firstAccuracy):'暂无数据'}</strong></span></div><p class="topic-evidence">首答正确 ${t.firstCorrect}/${t.covered} · 已覆盖 ${t.covered}/${t.total} · 待纠正 ${unresolved} 题</p><div class="progress-track" role="progressbar" aria-label="${t.label}题库覆盖" aria-valuenow="${t.covered}" aria-valuemin="0" aria-valuemax="${t.total}"><div class="progress-fill ${t.color}" style="width:${t.coverage*100}%"></div></div></div>`}).join('')}<p class="disclaimer">进度条仅表示题库覆盖。每个知识点只有 3 道示例题，不能推断真实能力。</p></section>
+    <section class="panel"><div class="panel-head"><h3>✦ 下一步建议</h3><span>规则推荐</span></div><div class="insight-card"><div class="insight-title"><span>✧</span> 作答证据 → 下一题</div><h4>${escapeHtml(next.title)}</h4><p>${escapeHtml(next.description)}</p>${next.question?`<p class="next-question">推荐题：${escapeHtml(next.question.title)}</p>`:''}</div><button class="small-btn" data-action="start" ${next.question?'':'disabled'}>去做针对性练习　→</button><p class="disclaimer" style="margin-bottom:0">先覆盖新题，再纠错和到期复测。纠正后不再计入待纠正数，首答历史保留。推荐无需大模型。</p></section></div>
+    <div class="section-grid"><section class="panel"><div class="panel-head"><h3>最近学习动态</h3><span>${state.demo?'当前为虚构演示记录':'你的本地作答记录'}</span></div>${history.length?`<div class="mini-list">${history.map(h=>{const q=getQuestion(h.questionId);return `<div class="mini-list-item"><div class="mini-dot">${h.correct?'✓':'×'}</div><div><strong>${escapeHtml(q?.title||h.questionId)}</strong><span>${new Date(h.at).toLocaleDateString('zh-CN',{month:'2-digit',day:'2-digit'})} · ${escapeHtml(getTopic(h.topic)?.group||'练习')}</span></div><div class="mini-status ${h.correct?'good':'bad'}">${h.correct?'回答正确':'需要复盘'}</div></div>`}).join('')}</div>`:'<div class="empty"><div class="empty-icon">◌</div><strong>还没有学习记录</strong>先开始一题，或加载虚构演示数据查看完整产品体验。</div>'}</section>
+    <section class="panel"><div class="panel-head"><h3>产品设计原则</h3><a href="#product" data-view="product">了解产品思路 ↗</a></div><div class="mini-list"><div class="mini-list-item"><div class="mini-dot">①</div><div><strong>先诊断，再推荐</strong><span>基于首次作答，降低盲目刷题</span></div></div><div class="mini-list-item"><div class="mini-dot">②</div><div><strong>解释为什么推荐</strong><span>每条建议提供数据依据</span></div></div><div class="mini-list-item"><div class="mini-dot">③</div><div><strong>区分事实与模型能力</strong><span>离线规则与在线 AI 讲解明确标注</span></div></div></div></section></div>`;
+}
+function showPractice() {
+  let q=getQuestion(state.questionId);
+  if (!q) return `<div class="empty"><h1>${state.practiceMode==='review'?'本轮复习完成':'本轮练习完成'}</h1><p>${escapeHtml(state.recommendation?.reason || '目前没有待练题目。')}</p><button class="btn btn-primary" data-view="dashboard">返回学习总览</button> <button class="btn btn-neutral" data-action="start">查看全部知识点</button></div>`;
+  const topic=getTopic(q.topic), isCorrect=state.selected===q.answer;
+  return `<div class="page-header"><div><div class="eyebrow">PRACTICE & FEEDBACK</div><h1>智能练习</h1><p>先独立作答，再看步骤解析；针对薄弱点推荐下一题。${state.demo?' 当前已加载虚构演示数据，请勿当作真实学习记录。':''}</p></div><span class="demo-pill">12 道原创示例题</span></div>
+    <div class="picker"><button class="chip ${state.topic==='all'?'active':''}" data-action="topic" data-topic="all">✦ 自适应推荐</button>${TOPICS.map(t=>`<button class="chip ${state.topic===t.id?'active':''}" data-action="topic" data-topic="${t.id}">${t.label}</button>`).join('')}</div>
+    <div class="recommendation-note"><strong>${state.practiceMode==='review'?'错题与到期复测':'为什么推荐这题 · 规则版'}</strong><p>${escapeHtml(state.recommendation?.reason || '')}</p>${state.topic!=='all'?'<span>当前已手动限定知识点；切换“自适应推荐”可跨知识点选题。</span>':''}</div>
+    <div class="practice-layout"><section class="panel question-card"><div class="question-top"><span class="q-tag">${escapeHtml(topic.group)} · ${escapeHtml(topic.label)}</span><span class="q-difficulty">难度 ${'●'.repeat(q.difficulty)}${'○'.repeat(3-q.difficulty)}</span></div><div class="q-index">QUESTION · ${String(QUESTIONS.indexOf(q)+1).padStart(2,'0')} / ${QUESTIONS.length}</div><h2>${escapeHtml(q.title)}</h2><div class="question-stem">${escapeHtml(q.stem)}</div><div class="options" role="group" aria-label="作答选项">${q.options.map((o,i)=>`<button class="option ${state.selected===i?'selected':''} ${state.answered&&q.answer===i?'correct':''} ${state.answered&&state.selected===i&&!isCorrect?'incorrect':''}" data-action="choose" data-choice="${i}" aria-pressed="${state.selected===i}" ${state.answered?'disabled':''}><span class="option-letter">${'ABCD'[i]}</span><span>${escapeHtml(o)}${state.answered&&q.answer===i?'（正确答案）':''}${state.answered&&state.selected===i?'（你的选择）':''}</span></button>`).join('')}</div>
+    ${state.answered?`<div class="answer-result ${isCorrect?'good':'bad'}" tabindex="-1"><strong>${isCorrect?'✓ 回答正确，继续巩固':'✕ 这题没答对，先看看解题步骤'}</strong><p>预写解析 · AI 辅助整理，尚未经独立教育专家审核。</p><ol>${q.analysis.map(p=>`<li>${escapeHtml(p)}</li>`).join('')}</ol><div class="trap">易错提醒：${escapeHtml(q.trap)}</div></div><div class="feedback-box">${!isCorrect?`<p><strong>这次主要卡在哪里？</strong> 可选自评，不是 AI 判断</p><div class="feedback-options">${Object.entries(ERROR_REASONS).map(([id,label])=>`<button class="chip" data-action="error-reason" data-value="${id}" aria-pressed="${state.attempt?.errorReason===id}">${label}</button>`).join('')}</div>${state.attempt?.errorReason?`<p role="status">已记录：${ERROR_REASONS[state.attempt.errorReason]}。${state.attempt.errorReason==='concept'?'回看知识点公式，再用新题验证。':state.attempt.errorReason==='method'?'先识别题型，再选择方法。':state.attempt.errorReason==='careless'?'列出条件与单位，提交前检查计算。':'结合解析回顾过程，不必急于下结论。'}</p>`:''}`:''}<p>这份预写解析有帮助吗？</p><button class="chip" data-action="helpful" data-value="yes" aria-pressed="${state.attempt?.helpful==='yes'}">有帮助</button> <button class="chip" data-action="helpful" data-value="no" aria-pressed="${state.attempt?.helpful==='no'}">仍不清楚</button>${state.attempt?.helpful?'<p role="status">反馈已记录在本机，用于你回顾解析体验；没有上传或训练模型。</p>':''}</div>`:''}
+    <div class="question-actions"><span class="question-aside-foot">${state.answered?'答案已计入本地学习记录':'独立作答 · 无计时压力'}</span>${state.answered?'<button class="btn btn-primary" data-action="next">下一题　→</button>':`<button class="btn btn-primary" data-action="submit" ${state.selected==null?'disabled':''}>提交答案　→</button>`}</div></section>
+    <aside><div class="panel aside-card"><div class="panel-head" style="margin-bottom:15px"><h3>知识点反馈</h3></div><span class="concept-pill">${escapeHtml(topic.label)}</span>${state.answered?`<div class="method-box"><strong>迁移到下一题的方法</strong><p>${escapeHtml(topic.method)}</p></div>`:'<p class="question-aside-foot">先独立完成本题。提交后解锁方法卡片和易错提醒，避免提示影响首答。</p>'}<p class="question-aside-foot">${state.answered?`下次复习：${new Date(state.attempt.at+(isCorrect?3:1)*86400000).toLocaleString('zh-CN')}。固定间隔仅为演示，答对一次不代表掌握。`:'首答正确率只计算每题第一次提交。复测会更新当前错题状态，同时保留首答证据。'}</p></div>
+    <div class="panel aside-card" style="margin-top:17px"><h3>✦ AI 延伸讲解（可选）</h3><p class="question-aside-foot">${state.aiAvailable?'本地模型接口已配置。点击后会向 OpenAI 发送本题、你的选项及预写解析，不发送学习历史或自评反馈。模型可能出错，请核对原解析。':'当前未启用模型讲解；公开静态版和离线版只提供预写解析。核心练习不需要 API Key。'}</p><button class="btn explain-btn" data-action="ai" ${!state.answered||state.aiLoading||!state.aiAvailable?'disabled':''}>${state.aiLoading?'正在请求…':state.aiAvailable?'请求 AI 讲解　↗':'模型讲解未启用'}</button>${state.aiResponse?`<div class="explain-output">${escapeHtml(state.aiResponse)}</div>`:''}</div></aside></div>`;
+}
+function showReview() {
+  const due=reviewQueue(state.history);
+  const dueIds=new Set(due.map(x=>x.question.id));
+  const wrong=QUESTIONS.filter(q=>latestForQuestion(state.history,q.id)?.correct===false&&!dueIds.has(q.id));
+  const upcoming=QUESTIONS.filter(q=>latestForQuestion(state.history,q.id)?.correct===true&&!dueIds.has(q.id));
+  const firstWrong=QUESTIONS.filter(q=>state.history.find(h=>h.questionId===q.id)?.correct===false);
+  const corrected=firstWrong.filter(q=>latestForQuestion(state.history,q.id)?.correct===true).length;
+  return `<div class="page-header"><div><div class="eyebrow">REVIEW & RETENTION</div><h1>复习计划</h1><p>最近答错间隔 1 天、答对间隔 3 天。每次提交都会重排时间，固定间隔仅供演示。</p></div><button class="btn btn-secondary" data-action="review-start" ${!due.length&&!wrong.length?'disabled':''}>开始复习　↗</button></div>
+    <div class="recommendation-note"><strong>首答错题 ${firstWrong.length} 道 · 最近已答对 ${corrected} 道</strong><p>这里只是同题纠正记录，可能受记忆影响，不能解读为提分效果。到期题、未到期错题和后续复习分开列出，每题只出现一次。</p></div>
+    <section class="panel review-section"><div class="panel-head"><h3>已到期 · ${due.length} 题</h3><span>优先复习</span></div>
+    ${due.length?due.map(x=>reviewItem(x.question,'计划到期')).join('') : '<div class="empty"><strong>目前没有到期复习题目</strong>答题记录会自动形成后续计划。</div>'}
+    ${wrong.length?`<div class="panel-head" style="margin-top:30px"><h3>待纠正 · ${wrong.length} 题</h3><span>尚未到期，可立即巩固</span></div>${wrong.map(q=>reviewItem(q,'最近答错')).join('')}`:''}
+    ${upcoming.length?`<div class="panel-head" style="margin-top:30px"><h3>后续复习 · ${upcoming.length} 题</h3><span>最近已答对</span></div>${upcoming.map(q=>reviewItem(q,'等待到期',false)).join('')}`:''}</section>`;
+}
+function reviewItem(q,badge,actionable=true) {
+  const latest=latestForQuestion(state.history,q.id);
+  const reason=latest?.errorReason?` · 自评：${ERROR_REASONS[latest.errorReason]}`:'';
+  const date=new Date(latest.at+(latest.correct?3:1)*86400000).toLocaleString('zh-CN');
+  return `<div class="review-item" data-review-id="${q.id}"><div class="topic-glyph ${getTopic(q.topic)?.color}">${getTopic(q.topic)?.icon}</div><div class="review-name"><strong>${escapeHtml(q.title)}</strong><span>${escapeHtml(getTopic(q.topic)?.group)} · ${latest.correct?'最近答对':'最近答错'}${reason}</span><span>下次复习：${date}</span></div><div class="review-badge">${badge}</div>${actionable?`<button class="btn btn-neutral" data-action="review-q" data-qid="${q.id}" aria-label="复测${escapeHtml(q.title)}">复测 →</button>`:''}</div>`;
+}
+function showProduct() {
+  return `<div class="page-header"><div><div class="eyebrow">BEHIND THE PRODUCT</div><h1>产品方案与决策</h1><p>这个页面不是宣传文案，而是把用户需求、MVP 边界与衡量指标公开呈现。</p></div><a href="docs/PRD.md" target="_blank" class="btn btn-neutral">查看完整 PRD ↗</a></div>
+    <div class="panel" style="margin-bottom:20px"><div class="panel-head"><h3>问题定义 · Problem Statement</h3><span>产品经理视角</span></div><div class="callout"><strong>看完课程 ≠ 真正掌握。</strong> 学习者可能记得概念，却在实际做题时遇到题型识别不准、错误反复出现的问题。传统刷题工具往往能够记录对错，但没有清晰告诉用户“为什么优先练这个”。</div><div class="prd-flow" style="margin-top:25px"><span class="flow-step">独立作答</span><span class="flow-arrow">→</span><span class="flow-step">记录首答</span><span class="flow-arrow">→</span><span class="flow-step">薄弱点排序</span><span class="flow-arrow">→</span><span class="flow-step">针对性练习</span><span class="flow-arrow">→</span><span class="flow-step">间隔复测</span></div></div>
+    <div class="detail-list" style="margin-bottom:20px"><div class="detail-tile"><div class="detail-num">01</div><h3>确定目标用户与核心场景</h3><p>目标用户是假设：已学过理论但迁移不稳的自学者。初始问题来自个人学习观察，尚未访谈验证。</p></div><div class="detail-tile"><div class="detail-num">02</div><h3>用可解释规则建立基线</h3><p>保留首答证据，用当前未纠正错题数与覆盖缺口排序。规则未经教育效果验证，不作能力评分。</p></div><div class="detail-tile"><div class="detail-num">03</div><h3>先验证 AI 的增量价值</h3><p>模型可能帮助重述难懂的解析，但尚未做真实质量评测。保留可选本地接口，公开版使用预写解析。</p></div><div class="detail-tile"><div class="detail-num">04</div><h3>定义可验证的成功指标</h3><p>下一轮计划5人任务测试，再考虑推荐转化与延迟复测；没有真实增长或提分数据。</p></div></div>
+    <div class="product-columns"><section class="panel"><div class="panel-head"><h3>成功指标设计</h3></div><table class="metric-table"><tr><th>指标</th><th>定义</th></tr><tr><td>首次作答正确率</td><td>首答正确题数 / 独立首答总数</td></tr><tr><td>知识点覆盖率</td><td>首次作答题数 / 该知识点题库数</td></tr><tr><td>错题复测改进率</td><td>复测正确的错题 / 已复测错题</td></tr><tr><td>推荐接受率</td><td>点击并开始推荐练习次数 / 推荐曝光</td></tr></table><p class="disclaimer">目前只实现部分基础测量；其余是后续埋点计划，没有虚构的业务增长数据。</p></section><section class="panel"><div class="panel-head"><h3>MVP 边界说明</h3></div><p class="disclaimer"><strong>已实现：</strong>原创示例题、自主作答、首答记录、知识点统计、可解释的规则推荐、简化间隔复习、本地数据存储、可选模型讲解接口。</p><p class="disclaimer"><strong>未实现：</strong>真实题库接入、用户登录、多设备同步、知识追踪模型、经实验证实的提分效果、上线用户增长。</p><a class="inline-link" href="docs/METRICS.md" target="_blank">查看指标与实验假设 ↗</a></section></div>`;
+}
+function render() {
+  document.querySelectorAll('.nav-item').forEach(el=>{el.classList.toggle('active',el.dataset.view===state.view); if(el.dataset.view===state.view)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
+  const labels={dashboard:'学习总览',practice:'智能练习',review:'复习计划',product:'产品方案'};
+  document.querySelector('#current-page-title').textContent=labels[state.view]||labels.dashboard;
+  app.innerHTML=`${state.demo?'<div class="data-notice" role="status">虚构演示数据模式 · 本轮新增作答也仅用于体验。开始个人练习前请重置数据。</div>':''}${state.storageWarning?`<div class="data-notice warning" role="alert">${escapeHtml(state.storageWarning)}</div>`:''}`+({dashboard:showDashboard,practice:showPractice,review:showReview,product:showProduct}[state.view]||showDashboard)();
+  const count=reviewQueue(state.history).length;
+  document.querySelector('#review-count').textContent=count;
+  document.querySelector('#review-count').classList.toggle('show',count>0);
+}
+async function requestAI() {
+  const q=getQuestion(state.questionId);if (!q||!state.answered||state.aiLoading)return;
+  if (!state.aiAvailable) {
+    state.aiResponse='当前环境未启用模型讲解。静态演示使用预写解析；本地配置方法见 README。';
+    render(); return;
+  }
+  const selected=state.selected;
+  const generation=state.generation;
+  state.aiLoading=true;state.aiResponse='正在请求模型讲解…';render();
+  try {
+    const response=await fetch('/api/coach',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({questionId:q.id,selected})});
+    const data=await response.json();
+    if(!response.ok) throw new Error(data.error||'模型接口不可用');
+    if (state.generation !== generation || state.questionId !== q.id || !state.answered) return;
+    state.aiResponse=data.explanation||'模型没有返回内容';
+  } catch(e) {if (state.generation === generation && state.questionId === q.id && state.answered) state.aiResponse=`AI 讲解暂不可用：${e.message}。请使用预写解析。`;}
+  if (state.generation === generation && state.questionId === q.id && state.answered) {state.aiLoading=false;render();}
+}
+document.addEventListener('click',ev=>{
+  const nav=ev.target.closest('[data-view]');
+  if(nav) {ev.preventDefault();navigate(nav.dataset.view,nav.dataset.topic||undefined);return;}
+  const button=ev.target.closest('[data-action]');if(!button)return;
+  const action=button.dataset.action;
+  if(action==='seed'){ if(state.history.length&&!confirm('演示数据会替换当前本地记录，是否继续？'))return;state.history=seededDemoHistory();state.demo=true;save();render();toast('已加载虚构示例记录'); }
+  if(action==='start'){state.topic='all';navigate('practice');}
+  if(action==='practice-topic'){navigate('practice',button.dataset.topic);}
+  if(action==='topic'){state.topic=button.dataset.topic;state.practiceMode='adaptive';setQuestion();render();}
+  if(action==='choose'&&!state.answered){state.selected=Number(button.dataset.choice);render();app.querySelector(`[data-choice="${state.selected}"]`)?.focus();}
+  if(action==='submit'&&state.selected!=null&&!state.answered){const q=getQuestion(state.questionId);if(!q)return;state.attempt={questionId:q.id,topic:q.topic,correct:state.selected===q.answer,selected:state.selected,at:Date.now(),mode:state.practiceMode};state.history.push(state.attempt);state.answered=true;save();render();app.querySelector('.answer-result')?.focus();toast(state.selected===q.answer?'回答正确，已记录':'已记录错题，及时复盘更有效');}
+  if(action==='next'){setQuestion();render();}
+  if(action==='error-reason'&&state.attempt&&!state.attempt.correct&&Object.hasOwn(ERROR_REASONS,button.dataset.value)){state.attempt.errorReason=button.dataset.value;save();render();app.querySelector(`[data-action="error-reason"][data-value="${button.dataset.value}"]`)?.focus();}
+  if(action==='helpful'&&state.attempt&&['yes','no'].includes(button.dataset.value)){state.attempt.helpful=button.dataset.value;save();render();app.querySelector(`[data-action="helpful"][data-value="${button.dataset.value}"]`)?.focus();}
+  if(action==='review-q'){state.topic='all';state.view='practice';state.practiceMode='review';setQuestion({questionId:button.dataset.qid});window.location.hash='practice';render();window.scrollTo(0,0);}
+  if(action==='review-start'){state.view='practice';state.topic='all';state.practiceMode='review';setQuestion({mode:'review'});window.location.hash='practice';render();window.scrollTo(0,0);}
+  if(action==='ai'){requestAI();}
+});
+document.querySelector('#reset-button').addEventListener('click',()=>{
+  if (!confirm('确定清空本设备上的作答记录吗？此操作无法撤销。')) return;
+  try {localStorage.removeItem(STORAGE_KEY);state.storageWarning='';} catch {state.storageWarning='无法清除浏览器持久记录，刷新后旧数据可能恢复。请检查存储权限。';}
+  state.history=[];state.demo=false;state.topic='all';state.view='dashboard';setQuestion();window.location.hash='dashboard';render();toast(state.storageWarning||'本地学习记录已重置');
+});
+window.addEventListener('hashchange',()=>{
+  const view=window.location.hash.slice(1);
+  if(['dashboard','practice','review','product'].includes(view) && view!==state.view) {
+    state.view=view;
+    if(view==='practice')setQuestion();
+    render();
+  }
+});
+// On a static GitHub Pages deployment, the hash route remains usable after reload.
+const initial=window.location.hash.replace('#','');
+if(['dashboard','practice','review','product'].includes(initial)){state.view=initial;if(initial==='practice')setQuestion();}
+render();
+// Probe only a loopback development service. Pages (including custom domains) and file:// stay fully static.
+if (location.hostname === '127.0.0.1' && location.protocol === 'http:' && !location.pathname.endsWith('preview.html')) {
+  fetch('/api/capabilities').then(r=>r.ok?r.json():{ai:false}).then(data=>{state.aiAvailable=data.ai===true;if(state.view==='practice')render();}).catch(()=>{});
+}
+
+</script>
+</body>
+</html>
